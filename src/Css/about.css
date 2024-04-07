@@ -1,0 +1,88 @@
+.About {
+  background-image: url("../asserts/backgroundImage.e84d420be55d4eeb240c.png");
+  background-color: rgb(88, 85, 85);
+  padding: 10px;
+  height: 100%;
+  opacity: 1;
+  color: white;
+}
+.slide {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0px;
+}
+
+.section {
+  width: 35%;
+  margin: auto;
+  opacity: 0;
+  transform: rotateX(90deg);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.paragraph,
+.paragraph2 {
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  width: 40%;
+  margin: auto;
+}
+.paragraph h1, .paragraph2 h1{
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.paragraph {
+  transform: translateX(80px);
+}
+
+.paragraph2 {
+  transform: translateX(-80px);
+}
+p {
+  font-size: 20px;
+}
+.section img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+}
+
+.section.animate {
+  opacity: 1;
+  transition: 1.5s;
+  transform: rotateX(0deg);
+}
+.paragraph.animate {
+  opacity: 1;
+  transition: 1.5s;
+  transform: translateX(0px);
+}
+
+.paragraph2.animate {
+  opacity: 1;
+  transition: 1.5s;
+  transform: translateX(0px);
+}
+
+@media only screen and (max-width: 980px) {
+  .slide {
+    display: flex;
+    flex-direction: column;
+  }
+  .slide2{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .section img {
+    width: 300px;
+    height: 300px;
+  }
+  p{
+    font-size: 18px;
+  }
+  .paragraph,
+.paragraph2 {
+  width: 70%;
+}
+}
